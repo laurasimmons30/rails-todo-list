@@ -17,6 +17,13 @@ class ItemsController < ApplicationController
       end
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    flash[:notice] = "Item Removed"
+    redirect_to items_path
+  end
+
   protected
 
   def item_params

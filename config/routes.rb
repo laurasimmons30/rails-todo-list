@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'items#index'
-  resources :items, only: [:index, :new, :create]
+  resources :items, except: [:update, :edit]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

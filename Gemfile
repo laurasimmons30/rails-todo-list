@@ -42,4 +42,5 @@ group :development, :test do
 end
 
 gem 'foundation-rails'
+gem 'pry-rails'
 
